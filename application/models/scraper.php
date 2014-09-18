@@ -17,15 +17,8 @@ class Scraper extends CI_Model {
 		// close the curl session
 		curl_close($ch);
 
-
-		
+		// returns html elements of the page
 		return htmlentities($output);
-	}
-
-
-	public function initialize(){
-		$pageHTML = Scraper::scrape();
-		print $pageHTML;
 	}
 
 }
