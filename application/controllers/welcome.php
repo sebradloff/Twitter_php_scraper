@@ -6,7 +6,7 @@ class Welcome extends CI_Controller {
 	public function index() {
 		$this->load->model("scraper");
 
-		$followerNumber = $this->scraper->scrape();
+		$followerNumber = $this->scraper->initialize();
 
 		print_r($followerNumber);
 	}

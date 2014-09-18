@@ -2,7 +2,7 @@
 
 class Scraper extends CI_Model {
 
-	public function scrape(){
+	public static function scrape(){
 		// initializes curl sequence
 		$ch = curl_init();
 
@@ -19,7 +19,13 @@ class Scraper extends CI_Model {
 
 
 		
-		echo htmlentities($output);
+		return htmlentities($output);
+	}
+
+
+	public function initialize(){
+		$pageHTML = Scraper::scrape();
+		print $pageHTML;
 	}
 
 }
