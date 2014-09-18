@@ -7,6 +7,9 @@ class Welcome extends CI_Controller {
 		$this->load->model("scraper");
 		$rawHTML = $this->scraper->scrape();
 
+		$this->load->model("parser");
+		$followerNumber = $this->parser->getFollowerNumber();
+		
 
 	}
 
