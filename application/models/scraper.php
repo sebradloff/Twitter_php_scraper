@@ -2,7 +2,7 @@
 
 class Scraper extends CI_Model {
 
-	public static function scrape(){
+	public function scrape(){
 		// initializes curl sequence
 		$ch = curl_init();
 
