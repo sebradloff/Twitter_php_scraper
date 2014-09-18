@@ -14,9 +14,9 @@
     		array_push($metrics, $span->innertext);
     	}
 
-    	followerNumber = $metrics[3];
+    	$followerNumber = $metrics[3];
     	
-    	return followerNumber;
+    	return $followerNumber;
 	
 		}
 

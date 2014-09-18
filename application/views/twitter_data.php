@@ -1,0 +1,1 @@
+Barrack Obama has <?php echo $followerNumber; ?>

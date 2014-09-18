@@ -7,6 +7,9 @@ class Welcome extends CI_Controller {
 		$this->load->model("parser");
 		$followerNumber = $this->parser->getFollowerNumber();
 
+		$data = array('followerNumber' => $followerNumber);
+
+		$this->load->view('twitter_data', $data);
 
 	}
 
