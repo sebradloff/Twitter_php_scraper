@@ -6,10 +6,10 @@ class Welcome extends CI_Controller {
 	public function index() {
 		$this->load->model("scraper");
 		$rawHTML = $this->scraper->scrape();
-
-		$this->load->model("parser");
-		$followerNumber = $this->parser->getFollowerNumber();
 		
+		$this->load->model("parser");
+		$followerNumber = $this->parser->getFollowerNumber($rawHTML);
+
 
 	}
 
